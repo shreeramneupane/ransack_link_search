@@ -1,0 +1,14 @@
+<% @adverts.each do |advert| %>
+  <p>
+    <strong>Title:</strong>
+    <%= advert.title %>
+  </p>
+
+  <p>
+    <strong>Content:</strong>
+    <%= advert.content %>
+  </p>
+  <br>
+<% end %>
+
+<%= link_to 'Home', adverts_path %>

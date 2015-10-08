@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @advert.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @advert.content %>
+</p>
+
+<%= link_to 'Edit', edit_advert_path(@advert) %> |
+<%= link_to 'Back', adverts_path %>
+</br>
+<%= link_to 'similar jobs', search_adverts_path(q: {title_cont_any: @advert.title.split(' ')}) %>
